@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estrella - Contenido Exclusivo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Age Verification Overlay -->
+  <div id="age-gate" class="age-gate">
+    <div class="age-gate__box">
+      <div class="age-gate__logo">&#10025; Estrella</div>
+      <h1>Verificación de edad</h1>
+      <p>Este sitio contiene contenido para adultos (+18).<br>
+         Al entrar confirmas que eres mayor de edad y que el acceso a este tipo de contenido es legal en tu país.</p>
+      <div class="age-gate__buttons">
+        <button onclick="enterSite()" class="btn btn--primary">Soy mayor de 18 años</button>
+        <a href="https://www.google.com" class="btn btn--secondary">Salir</a>
+      </div>
+      <p class="age-gate__disclaimer">Al continuar aceptas los <a href="terms.html">Términos y Condiciones</a> y la <a href="privacy.html">Política de Privacidad</a>.</p>
+    </div>
+  </div>
+
+  <!-- Main Site -->
+  <div id="main-site" class="hidden">
+
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__logo">&#10025; Estrella</div>
+        <ul class="nav__links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+        <a href="#suscribete" class="btn btn--primary nav__cta">Suscríbete</a>
+        <button class="nav__burger" onclick="toggleMenu()" aria-label="Menú">&#9776;</button>
+      </nav>
+      <div id="mobile-menu" class="nav__mobile hidden">
+        <a href="#inicio">Inicio</a>
+        <a href="#galeria">Galería</a>
+        <a href="#videos">Videos</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+        <a href="#suscribete" class="btn btn--primary">Suscríbete</a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero">
+      <div class="hero__overlay"></div>
+      <div class="hero__content container">
+        <span class="hero__badge">Contenido Exclusivo +18</span>
+        <h1 class="hero__title">Hola, soy <span class="accent">Estrella</span></h1>
+        <p class="hero__subtitle">Bienvenido a mi espacio privado. Aquí comparto contenido exclusivo, fotos, videos y mucho más solo para mis fans.</p>
+        <div class="hero__actions">
+          <a href="#suscribete" class="btn btn--primary btn--lg">Ver contenido exclusivo</a>
+          <a href="#sobre-mi" class="btn btn--outline btn--lg">Conóceme</a>
+        </div>
+        <div class="hero__stats">
+          <div class="stat">
+            <span class="stat__num">500+</span>
+            <span class="stat__label">Fotos</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">120+</span>
+            <span class="stat__label">Videos</span>
+          </div>
+          <div class="stat">
+            <span class="stat__num">10K+</span>
+            <span class="stat__label">Fans</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galería Preview -->
+    <section id="galeria" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Galería <span class="accent">exclusiva</span></h2>
+          <p>Un vistazo a mi contenido. Suscríbete para ver todo sin límites.</p>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item locked">
+            <div class="gallery-item__img gradient-1"></div>
+            <div class="gallery-item__lock"><span>&#128274;</span><p>Solo suscriptores</p></div>
+          </div>
+          <div class="gallery-item locked">
+            <div class="gallery-item__img gradient-2"></div>
+            <div class="gallery-item__lock"><span>&#128274;</span><p>Solo suscriptores</p></div>
+          </div>
+          <div class="gallery-item locked">
+            <div class="gallery-item__img gradient-3"></div>
+            <div class="gallery-item__lock"><span>&#128274;</span><p>Solo suscriptores</p></div>
+          </div>
+          <div class="gallery-item locked">
+            <div class="gallery-item__img gradient-4"></div>
+            <div class="gallery-item__lock"><span>&#128274;</span><p>Solo suscriptores</p></div>
+          </div>
+          <div class="gallery-item locked">
+            <div class="gallery-item__img gradient-5"></div>
+            <div class="gallery-item__lock"><span>&#128274;</span><p>Solo suscriptores</p></div>
+          </div>
+          <div class="gallery-item locked">
+            <div class="gallery-item__img gradient-6"></div>
+            <div class="gallery-item__lock"><span>&#128274;</span><p>Solo suscriptores</p></div>
+          </div>
+        </div>
+        <div class="section__cta">
+          <a href="#suscribete" class="btn btn--primary btn--lg">Desbloquear galería completa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Videos Preview -->
+    <section id="videos" class="section section--dark">
+      <div class="container">
+        <div class="section__header">
+          <h2>Mis <span class="accent">videos</span></h2>
+          <p>Contenido en video de alta calidad. Accede suscribiéndote.</p>
+        </div>
+        <div class="video-grid">
+          <div class="video-card">
+            <div class="video-card__thumb gradient-7">
+              <div class="video-card__play">&#9654;</div>
+              <div class="video-card__badge">VIP</div>
+            </div>
+            <div class="video-card__info">
+              <h3>Video especial #1</h3>
+              <span class="video-card__dur">12:34</span>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-card__thumb gradient-8">
+              <div class="video-card__play">&#9654;</div>
+              <div class="video-card__badge">Nuevo</div>
+            </div>
+            <div class="video-card__info">
+              <h3>Video especial #2</h3>
+              <span class="video-card__dur">08:15</span>
+            </div>
+          </div>
+          <div class="video-card">
+            <div class="video-card__thumb gradient-9">
+              <div class="video-card__play">&#9654;</div>
+              <div class="video-card__badge">VIP</div>
+            </div>
+            <div class="video-card__info">
+              <h3>Video especial #3</h3>
+              <span class="video-card__dur">20:00</span>
+            </div>
+          </div>
+        </div>
+        <div class="section__cta">
+          <a href="#suscribete" class="btn btn--primary btn--lg">Ver todos los videos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
+      <div class="container about">
+        <div class="about__img gradient-about"></div>
+        <div class="about__content">
+          <h2>Sobre <span class="accent">mí</span></h2>
+          <p>Soy Estrella, modelo y creadora de contenido exclusivo para adultos. Me encanta conectar con mis fans de una manera auténtica y sin filtros.</p>
+          <p>En mi perfil encontrarás fotos artísticas, videos privados, sesiones en vivo y contenido personalizado. Todo hecho con amor y pasión.</p>
+          <ul class="about__list">
+            <li>&#10003; Contenido nuevo cada semana</li>
+            <li>&#10003; Chat directo con suscriptores</li>
+            <li>&#10003; Peticiones personalizadas</li>
+            <li>&#10003; Lives exclusivos</li>
+          </ul>
+          <a href="#suscribete" class="btn btn--primary">Únete a mi comunidad</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Planes de suscripción -->
+    <section id="suscribete" class="section section--dark">
+      <div class="container">
+        <div class="section__header">
+          <h2>Elige tu <span class="accent">plan</span></h2>
+          <p>Accede a todo mi contenido con el plan que mejor se adapte a ti.</p>
+        </div>
+        <div class="plans">
+          <div class="plan">
+            <div class="plan__name">Básico</div>
+            <div class="plan__price">$9.99<span>/mes</span></div>
+            <ul class="plan__features">
+              <li>&#10003; Acceso a galería de fotos</li>
+              <li>&#10003; Videos básicos</li>
+              <li>&#10003; Feed exclusivo</li>
+              <li class="disabled">&#10007; Chat privado</li>
+              <li class="disabled">&#10007; Lives exclusivos</li>
+            </ul>
+            <a href="#contacto" class="btn btn--outline">Suscribirme</a>
+          </div>
+          <div class="plan plan--featured">
+            <div class="plan__badge">Más popular</div>
+            <div class="plan__name">VIP</div>
+            <div class="plan__price">$19.99<span>/mes</span></div>
+            <ul class="plan__features">
+              <li>&#10003; Todo lo del plan Básico</li>
+              <li>&#10003; Videos VIP completos</li>
+              <li>&#10003; Chat privado</li>
+              <li>&#10003; Lives exclusivos</li>
+              <li class="disabled">&#10007; Contenido personalizado</li>
+            </ul>
+            <a href="#contacto" class="btn btn--primary">Suscribirme</a>
+          </div>
+          <div class="plan">
+            <div class="plan__name">Premium</div>
+            <div class="plan__price">$39.99<span>/mes</span></div>
+            <ul class="plan__features">
+              <li>&#10003; Todo lo del plan VIP</li>
+              <li>&#10003; Contenido personalizado</li>
+              <li>&#10003; Videollamadas privadas</li>
+              <li>&#10003; Prioridad en respuestas</li>
+              <li>&#10003; Descuentos especiales</li>
+            </ul>
+            <a href="#contacto" class="btn btn--outline">Suscribirme</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Redes Sociales -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Sígueme en <span class="accent">redes</span></h2>
+          <p>Encuéntrame en tus plataformas favoritas para contenido exclusivo.</p>
+        </div>
+        <div class="socials">
+          <a href="#" class="social-card social-card--of">
+            <span class="social-card__icon">&#9825;</span>
+            <span class="social-card__name">OnlyFans</span>
+            <span class="social-card__handle">@estrella</span>
+          </a>
+          <a href="#" class="social-card social-card--ig">
+            <span class="social-card__icon">&#9742;</span>
+            <span class="social-card__name">Instagram</span>
+            <span class="social-card__handle">@estrella.oficial</span>
+          </a>
+          <a href="#" class="social-card social-card--tw">
+            <span class="social-card__icon">&#9825;</span>
+            <span class="social-card__name">Twitter / X</span>
+            <span class="social-card__handle">@estrella_x</span>
+          </a>
+          <a href="#" class="social-card social-card--tt">
+            <span class="social-card__icon">&#9835;</span>
+            <span class="social-card__name">TikTok</span>
+            <span class="social-card__handle">@estrella.tiktok</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="section section--dark">
+      <div class="container">
+        <div class="section__header">
+          <h2><span class="accent">Contáctame</span></h2>
+          <p>¿Tienes alguna pregunta o quieres hacer una petición personalizada?</p>
+        </div>
+        <form class="contact-form" onsubmit="handleForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Asunto</label>
+            <select id="subject" name="subject">
+              <option value="">Selecciona un asunto</option>
+              <option value="suscripcion">Información sobre suscripción</option>
+              <option value="personalizado">Contenido personalizado</option>
+              <option value="colaboracion">Colaboración</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg">Enviar mensaje</button>
+        </form>
+        <div id="form-success" class="form-success hidden">
+          <p>&#10003; Mensaje enviado. Te responderé pronto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__brand">
+            <div class="footer__logo">&#10025; Estrella</div>
+            <p>Contenido exclusivo para adultos (+18)</p>
+          </div>
+          <div class="footer__links">
+            <h4>Legal</h4>
+            <a href="terms.html">Términos y Condiciones</a>
+            <a href="privacy.html">Política de Privacidad</a>
+            <a href="dmca.html">DMCA</a>
+            <a href="2257.html">18 U.S.C. 2257</a>
+          </div>
+          <div class="footer__links">
+            <h4>Navegación</h4>
+            <a href="#inicio">Inicio</a>
+            <a href="#galeria">Galería</a>
+            <a href="#videos">Videos</a>
+            <a href="#suscribete">Suscripción</a>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p>&copy; 2026 Estrella. Todos los derechos reservados. | Solo para mayores de 18 años.</p>
+          <p>Todos los modelos son mayores de 18 años. Contenido con consentimiento y uso legal.</p>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
