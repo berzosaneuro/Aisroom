@@ -2,12 +2,12 @@
 function enterSite() {
   document.getElementById('age-gate').style.display = 'none';
   document.getElementById('main-site').classList.remove('hidden');
-  localStorage.setItem('estrella_age_verified', '1');
+  localStorage.setItem('yostin_age_verified', '1');
 }
 
 // Comprobar si ya verificó la edad
 (function () {
-  if (localStorage.getItem('estrella_age_verified') === '1') {
+  if (localStorage.getItem('yostin_age_verified') === '1') {
     const gate = document.getElementById('age-gate');
     const site = document.getElementById('main-site');
     if (gate) gate.style.display = 'none';
